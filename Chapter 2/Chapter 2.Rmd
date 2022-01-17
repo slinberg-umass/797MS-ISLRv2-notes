@@ -1,0 +1,42 @@
+---
+title: "ISLRv2 chapter 2 exercises"
+author: "Steve Linberg, DACSS 797MS Spring 2022"
+date: "2022-01-13"
+output:
+  tufte::tufte_html: 
+      tufte_variant: "envisioned"
+  tufte::tufte_handout: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ISLR2)
+library(tufte)
+```
+
+> 1. _**For each of parts (a) through (d), indicate whether we would generally expect the performance of a flexible statistical learning method to be better or worse than an inflexible method. Justify your answer.**_
+
+`r newthought('Terminology note: the terms')` *flexible* and *inflexible* don't appear to be formally defined, and in fact, most of the searches I conducted for these terms in the context of statistical modeling simply led back either to the [textbook's website](https://www.statlearning.com/) itself, or to [discussions of the textbook](https://stats.stackexchange.com/questions/69237/flexible-and-inflexible-models-in-machine-learning). Neither term is used in the book beyond chapter 2, where they are introduced.
+
+It appears, therefore, that they are general-purpose terms that reflect, literally, a model's flexibility, which is a measure of how many parameters it can incorporate. One outcome of this is that the term *inflexible* is a close synonym of *simple* or *linear*, as in a simple linear regression that only has one parameter, and that a *flexible* method or model would be exemplified by a multiple linear regression incorporating many parameters, creating a curve with more complexity.
+
+The very general trend to observe in this context is that *inflexible*, or *simple*, models may run the risk of not reflecting the true complexity of the underlying data (and therefore being *biased*), where *flexible* models may risk *overfitting* the data and performing poorly when applied to new data (and thus having high *variance*).
+
+> (a) _**The sample size n is extremely large, and the number of predictors p is small.**_
+
+A flexible model is better for models with very large numbers of observations.
+
+> (b) _The number of predictors p is extremely large, and the number of observations n is small._
+
+> (c) _The relationship between the predictors and response is highly non-linear._
+
+> (d) _The variance of the error terms, i.e. $\sigma^2 = Var(\epsilon)$, is extremely high._
+
+
+```{r eval=FALSE}
+foo <- "bar"
+for (x in c(1, 2, 5)) {
+  bliff()
+}
+```
+
