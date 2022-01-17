@@ -3,8 +3,9 @@ title: "ISLRv2 chapter 2 exercises"
 author: "Steve Linberg, DACSS 797MS Spring 2022"
 date: "2022-01-13"
 output:
-  tufte::tufte_html: 
-      tufte_variant: "envisioned"
+  # tufte::tufte_html: 
+  #     tufte_variant: "envisioned"
+  tufte::tufte_html: default
   tufte::tufte_handout: default
 ---
 
@@ -14,29 +15,56 @@ library(ISLR2)
 library(tufte)
 ```
 
-> 1. _**For each of parts (a) through (d), indicate whether we would generally expect the performance of a flexible statistical learning method to be better or worse than an inflexible method. Justify your answer.**_
+# For each of parts (a) through (d), indicate whether we would generally expect the performance of a flexible statistical learning method to be better or worse than an inflexible method. Justify your answer.
 
-`r newthought('Terminology note: the terms')` *flexible* and *inflexible* don't appear to be formally defined, and in fact, most of the searches I conducted for these terms in the context of statistical modeling simply led back either to the [textbook's website](https://www.statlearning.com/) itself, or to [discussions of the textbook](https://stats.stackexchange.com/questions/69237/flexible-and-inflexible-models-in-machine-learning). Neither term is used in the book beyond chapter 2, where they are introduced.
+`r newthought('Terminology note: the terms')` *flexible* and *inflexible* don't appear to be formally defined, and most of the external searches I conducted for these terms in the context of statistical modeling simply led back either to the [textbook's website](https://www.statlearning.com/) itself, or to [discussions of the textbook](https://stats.stackexchange.com/questions/69237/flexible-and-inflexible-models-in-machine-learning). Neither term is used in the book beyond chapter 2, where they are introduced, and every use of *inflexible* is within the cautionary phrase *"relatively inflexible"* in the context of linear regression and least-square methods.
 
 It appears, therefore, that they are general-purpose terms that reflect, literally, a model's flexibility, which is a measure of how many parameters it can incorporate. One outcome of this is that the term *inflexible* is a close synonym of *simple* or *linear*, as in a simple linear regression that only has one parameter, and that a *flexible* method or model would be exemplified by a multiple linear regression incorporating many parameters, creating a curve with more complexity.
 
 The very general trend to observe in this context is that *inflexible*, or *simple*, models may run the risk of not reflecting the true complexity of the underlying data (and therefore being *biased*), where *flexible* models may risk *overfitting* the data and performing poorly when applied to new data (and thus having high *variance*).
 
-> (a) _**The sample size n is extremely large, and the number of predictors p is small.**_
+## (a) The sample size n is extremely large, and the number of predictors p is small.
 
-A flexible model is better for models with very large numbers of observations.
+The text does not appear to directly state anything concrete regarding this and the following examples. I suspect that the answer being sought here is that a flexible model is better for models with very large numbers of observations, and this may be because a larger *n* may be likely to be less linear in a very broad generalized sense.
 
-> (b) _The number of predictors p is extremely large, and the number of observations n is small._
+Note, however, on p.22:
 
-> (c) _The relationship between the predictors and response is highly non-linear._
+> in general, fitting a more flexible model requires estimating a greater number of parameters
 
-> (d) _The variance of the error terms, i.e. $\sigma^2 = Var(\epsilon)$, is extremely high._
+saying that flexible models generally require higher numbers of predictors, and p.23:
 
+> non-parametric approaches do suffer from a major disadvantage: since they do not reduce the problem of estimating $f$ to a small number of parameters, a very large number of observations (far more than is typically needed for a parametric approach) is required in order to obtain an accurate estimate for $f$.
 
-```{r eval=FALSE}
-foo <- "bar"
-for (x in c(1, 2, 5)) {
-  bliff()
-}
-```
+This implies that non-parametric methods (which are more flexible than parametric methods) tend to have larger numbers of parameters, which somewhat contradicts the above conclusion. And while it says that non-parametric methods may be *required* for situations with large numbers of observations, it does not say that they are *preferable*. It seems to me that it would depend to some extent on how much variability is found in the data. A very large dataset with strong uniformity (i.e. with a highly linear true $f$) could be served very well by an inflexible model.
 
+(All of this assumes that *non-parametric* largely overlaps, if not being synonymous with, *flexible*.)
+
+## (b) The number of predictors p is extremely large, and the number of observations n is small.
+
+See above; again, I suspect the answer being sought is that a less flexible, more linear model would be better for cases with small number of observations, but data with high variability might still be better served by a flexible model with less bias.
+
+## (c) The relationship between the predictors and response is highly non-linear.
+
+If this is describing a situation with a high degree of noise in the data, or a high irreducible error rate, a more flexible model will be better able to follow the data (subject to the ubiquitous risk of overfitting). However, the text suggests that this should be coupled with a large number of observations (p.36):
+
+> if the true $f$ is highly non-linear and we have an ample number of training observations, then we may do better using a highly flexible approach
+
+This implies that if the relationship between the predictors and response is highly non-linear, but the number of observations is small, a less flexible method may be preferable.
+
+## (d) The variance of the error terms, i.e. $\sigma^2 = Var(\epsilon)$, is extremely high.
+
+Somewhat following from the above answer; the larger the variance of the error terms, the likelier it is that overfitting would occur as the noise is chased. A less flexible approach will have more bias but less variance.
+
+# 2. Explain whether each scenario is a classification or regression prob- lem, and indicate whether we are most interested in inference or pre- diction. Finally, provide $n$ and $p$.
+
+## (a) We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry and the CEO salary. We are interested in understanding which factors affect CEO salary.
+
+## (b) We are considering launching a new product and wish to know whether it will be a success or a failure. We collect data on 20 similar products that were previously launched. For each product we have recorded whether it was a success or failure, price charged for the product, marketing budget, competition price, and ten other variables.
+
+## (c) We are interested in predicting the % change in the USD/Euro exchange rate in relation to the weekly changes in the world stock markets. Hence we collect weekly data for all of 2012. For each week we record the % change in the USD/Euro, the % change in the US market, the % change in the British market, and the % change in the German market.
+
+# 3. We now revisit the bias-variance decomposition.
+
+## (a) Provide a sketch of typical (squared) bias, variance, training error, test error, and Bayes (or irreducible) error curves, on a single plot, as we go from less flexible statistical learning methods towards more flexible approaches. The x-axis should represent the amount of flexibility in the method, and the y-axis should represent the values for each curve. There should be five curves. Make sure to label each one.
+
+## (b) Explain why each of the five curves has the shape displayed in part (a).

@@ -3,8 +3,9 @@ title: "ISLRv2 Glossary"
 author: "Steve Linberg, DACSS 797MS Spring 2022"
 date: "2022"
 output:
-  tufte::tufte_html: 
-      tufte_variant: "envisioned"
+  # tufte::tufte_html: 
+  #     tufte_variant: "envisioned"
+  tufte::tufte_html: default
   tufte::tufte_handout: default
 ---
 
@@ -15,6 +16,8 @@ library(tufte)
 ```
 
 Page numbers in parenthesis after terms.
+
+# Chapter 2
 
 input variable (15)
 : also *predictor*, *independent variable*, *feature*; usually written $X_1, X_2$, etc. The parameter or parameters we are testing to see if they are related to or affect the output.
@@ -88,3 +91,37 @@ variance (34)
 
 bias (35)
 : _"the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model"_, as in the error from the (presumed) linearity of a regression against non-linear data whose complexity it does not capture. More flexible models increase variance and decrease bias.
+
+bias-variance trade-off (36)
+: The tension in seeking the best model for the data between missing the true $f$ with an overly simple (biased) model, vs. an overfitted model with too much variance from mapping too closely to test data.
+
+error rate (37)
+: In classification, the proportion of classifications that are mistakes.
+$$\frac{1}{n}\sum_{i=1}^{n}I(y_i \neq \hat{y}_i)$$
+$I$ is 1 if $y_i \neq \hat{y}_i$ - if the guess for any given $y$ is wrong. The error rate is the percentage of incorrect classifications. Also the *training erorr rate*.
+
+indicator variable (37)
+: $I$ in the error rate definition above; a logical variable indicating the presence or absence of a characteristic or trait (such as an accurate classification).
+
+test error rate (37)
+: like the *training error rate* but applied to the test data. Uses $\text{Ave}$ instead of sum notation:
+$$\text{Ave}(I(y_0 \neq \hat{y}_0))$$
+$\hat{y}_0$ is the predicted class label from the classifier.
+
+conditional probability (37)
+: The chance that $Y = j$ given an observed $x_0$, as in the *Bayes classifier*:
+$$\text{Pr}(Y = j|X = x_0)$$
+In a two-class, yes/no classifier, we decide based on whether $\text{Pr}(Y = j|X = x_0)$ is $> 0.5$, or not. Note that $Y$ is the class, as in "ham"/"spam", not a $y$-axis coordinate.
+
+Bayes decision boundary (38)
+: a visual depiction of the line of 50% probability dividing (exactly two?) classes in a two-dimensional space
+
+Bayes error rate (38)
+: the expected (average) probability of classification error over all values of X in a data set.
+$$1 - E(\underset{j}{maxPr}(Y = j|X))$$
+The $\underset{j}{maxPr}$ whichever of the $j$ classes has the highest probability for any given value of $X$. Again, $Y$ is not a y-axis coordinate of a two-dimensional space, it's the *class* of the classification: "yes"/"no", "ham"/"spam", "infected"/"not infected". Also:
+_"The Bayes error rate is analogous to the irreducible error, discussed earlier."_
+
+K-nearest-neighbors (KNN) (39)
+: a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular "neighborhood" on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.
+
