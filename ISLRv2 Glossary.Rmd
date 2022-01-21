@@ -106,6 +106,9 @@ supervised learning (26)
 unsupervised learning (26)
 : a category of model in which there are observations/measurements $x_i, i = 1, \dots, n$, but no associated response $y_i$. Linear regression cannot be used because there is no response variable to predict.
 
+cluster analysis (27)
+: in unsupervised learning, a statistical method for determining whether a set of observations can be divided into "relatively distinct groups," looking for similarities within the groups. (Topic modeling may be an example of this.)
+
 quantitative variables (28)
 : numeric values; age, height, weight, quantity. Usually the response variable type for regression problems.
 

@@ -77,7 +77,7 @@ This is a prediction problem, as clearly described, and since the outcome variab
 
 ## (b) Explain why each of the five curves has the shape displayed in part (a).
 
-# 4. You will now think of some real-life applications for statistical learn- ing.
+# 4. You will now think of some real-life applications for statistical learning.
 
 ## (a) Describe three real-life applications in which classification might be useful. Describe the response, as well as the predictors. Is the goal of each application inference or prediction? Explain your answer.
 ## (b) Describe three real-life applications in which regression might be useful. Describe the response, as well as the predictors. Is the goal of each application inference or prediction? Explain your answer.
