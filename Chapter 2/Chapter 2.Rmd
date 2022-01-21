@@ -55,7 +55,7 @@ This implies that if the relationship between the predictors and response is hig
 
 Somewhat following from the above answer; the larger the variance of the error terms, the likelier it is that overfitting would occur as the noise is chased. A less flexible approach will have more bias but less variance.
 
-# 2. Explain whether each scenario is a classification or regression prob- lem, and indicate whether we are most interested in inference or pre- diction. Finally, provide $n$ and $p$.
+# 2. Explain whether each scenario is a classification or regression problem, and indicate whether we are most interested in inference or prediction. Finally, provide $n$ and $p$.
 
 ## (a) We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry and the CEO salary. We are interested in understanding which factors affect CEO salary.
 
