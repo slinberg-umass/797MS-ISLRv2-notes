@@ -3,10 +3,10 @@ title: "ISLRv2 chapter 2 exercises"
 author: "Steve Linberg, DACSS 797MS Spring 2022"
 date: "2022-01-13"
 output:
-  # tufte::tufte_html: 
-  #     tufte_variant: "envisioned"
-  tufte::tufte_html: default
-  tufte::tufte_handout: default
+  tufte::tufte_html:
+      tufte_variant: "envisioned"
+  # tufte::tufte_html: default
+  # tufte::tufte_handout: default
 ---
 
 ```{r setup, include=FALSE}
