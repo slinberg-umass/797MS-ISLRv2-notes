@@ -57,11 +57,19 @@ Somewhat following from the above answer; the larger the variance of the error t
 
 # 2. Explain whether each scenario is a classification or regression problem, and indicate whether we are most interested in inference or prediction. Finally, provide $n$ and $p$.
 
+(*prediction* is trying to anticipate the value, or likely outcome, of a set of predictors; *inference* is trying to understand the relationship between the outcome and the predictors. Both fall under the category of supervised learning, since there *is* an outcome variable to predict. $n$ is the sample size, or number of observations, and $p$ is the number of predictors.)
+
 ## (a) We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry and the CEO salary. We are interested in understanding which factors affect CEO salary.
+
+This is an inference problem, since we are trying to understand the relationship between the predictors and the salary. $n$ in this is case is 500 (for the firms), and $p$ is 4 (profit, number of employees, industry and salary).
 
 ## (b) We are considering launching a new product and wish to know whether it will be a success or a failure. We collect data on 20 similar products that were previously launched. For each product we have recorded whether it was a success or failure, price charged for the product, marketing budget, competition price, and ten other variables.
 
+This is a prediction problem, since the goal is to know the outcome but not necessarily care about the relationships between the predictors and the outcome. $n$ is 20, for the other products being examined, and $p$ is 14 (success/failure, price, marketing budget, competition price, and "ten other variables").
+
 ## (c) We are interested in predicting the % change in the USD/Euro exchange rate in relation to the weekly changes in the world stock markets. Hence we collect weekly data for all of 2012. For each week we record the % change in the USD/Euro, the % change in the US market, the % change in the British market, and the % change in the German market.
+
+This is a prediction problem, as clearly described. $n$ is 52 for 52 weeks of data in 2012, and $p$ is 4 for the percentage changes enumerated.
 
 # 3. We now revisit the bias-variance decomposition.
 
