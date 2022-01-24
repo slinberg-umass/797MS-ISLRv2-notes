@@ -94,7 +94,7 @@ dt + dt {
     padding-right: 60%;
 }
 dt + dt + dd {
-    margin-top: -1.625em; /* own height including padding */git add I
+    margin-top: -1.625em; /* own height including padding */
     padding-left: calc(30% + 1em);
 }
 </style>
@@ -103,96 +103,96 @@ dt + dt + dd {
 <h1>Chapter 2</h1>
 <dl>
 <dt>input variable (15)</dt>
-<dd><p>also <em>predictor</em>, <em>independent variable</em>, <em>feature</em>; usually written <span class="math inline">\(X_1, X_2\)</span>, etc. The parameter or parameters we are testing to see if they are related to or affect the output.</p>
+<dd>also <em>predictor</em>, <em>independent variable</em>, <em>feature</em>; usually written <span class="math inline">\(X_1, X_2\)</span>, etc. The parameter or parameters we are testing to see if they are related to or affect the output.
 </dd>
 <dt>output variable (15)</dt>
-<dd><p>also <em>response</em>, <em>dependent variable</em>; usually written <span class="math inline">\(Y\)</span>. The outcome being measured.</p>
+<dd>also <em>response</em>, <em>dependent variable</em>; usually written <span class="math inline">\(Y\)</span>. The outcome being measured.
 </dd>
 <dt>error term (16)</dt>
-<dd><p><span class="math inline">\(\epsilon\)</span> in the equation<br />
-<span class="math display">\[Y = f(X) + \epsilon\]</span> a random quantity of inaccuracy, <em>independent of X</em> and with <em>mean 0</em>.</p>
+<dd><span class="math inline">\(\epsilon\)</span> in the equation<br />
+<span class="math display">\[Y = f(X) + \epsilon\]</span> a random quantity of inaccuracy, <em>independent of X</em> and with <em>mean 0</em>.
 </dd>
 <dt>systematic (16)</dt>
-<dd><p><span class="math inline">\(f\)</span> in the equation<br />
-<span class="math display">\[Y = f(X) + \epsilon\]</span> the function that describes the (systematic) information <span class="math inline">\(X\)</span> provides about <span class="math inline">\(Y\)</span>. This plus the error term equals <span class="math inline">\(Y\)</span>.</p>
+<dd><span class="math inline">\(f\)</span> in the equation<br />
+<span class="math display">\[Y = f(X) + \epsilon\]</span> the function that describes the (systematic) information <span class="math inline">\(X\)</span> provides about <span class="math inline">\(Y\)</span>. This plus the error term equals <span class="math inline">\(Y\)</span>.
 </dd>
 <dt>reducible error (18)</dt>
-<dd><p>The amount of the error <span class="math inline">\(\epsilon\)</span> that could be eliminated by improving our estimator <span class="math inline">\(\hat{f}\)</span>; the difference between <span class="math inline">\(\hat{f}\)</span> and <span class="math inline">\(f\)</span>. This book and course is mostly about ways to minimize the reducible error.</p>
+<dd>The amount of the error <span class="math inline">\(\epsilon\)</span> that could be eliminated by improving our estimator <span class="math inline">\(\hat{f}\)</span>; the difference between <span class="math inline">\(\hat{f}\)</span> and <span class="math inline">\(f\)</span>. This book and course is mostly about ways to minimize the reducible error.
 </dd>
 <dt>irreducible error (18)</dt>
-<dd><p>The amount of <span class="math inline">\(\epsilon\)</span> that could not be reduced even if <span class="math inline">\(f\)</span> was a perfect estimator of <span class="math inline">\(Y\)</span>. Always greater than 0. Could be due to hidden variables in <span class="math inline">\(\epsilon\)</span>, or random fluctuations in Y, like a measure of “[a] patient’s general feeling of well-being on that day”.</p>
+<dd>The amount of <span class="math inline">\(\epsilon\)</span> that could not be reduced even if <span class="math inline">\(f\)</span> was a perfect estimator of <span class="math inline">\(Y\)</span>. Always greater than 0. Could be due to hidden variables in <span class="math inline">\(\epsilon\)</span>, or random fluctuations in Y, like a measure of “[a] patient’s general feeling of well-being on that day”.
 </dd>
 <dt>expected value (19)</dt>
-<dd><p><em>average value</em> of an expected measure.</p>
+<dd><em>average value</em> of an expected measure.
 </dd>
 <dt>training data (21)</dt>
-<dd><p>data used to develop the model for estimating <span class="math inline">\(f\)</span>.</p>
+<dd>data used to develop the model for estimating <span class="math inline">\(f\)</span>.
 </dd>
 <dt>parametric methods (21)</dt>
-<dd><p>A model based on one or more input parameters, that yields a value for Y, as in: <span class="math display">\[f(X) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p\]</span> <span class="math display">\[Y \approx \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p\]</span> <span class="math display">\[\text{income} \approx \beta_0 + \beta_1 \times \text{education} + \beta_2 \times \text{seniority}\]</span> This creates a predictive, <em>inflexible</em> model which usually does not match the true <span class="math inline">\(f\)</span>, but which has advantages of simplicity and interpretability. It can be used to predict values for <span class="math inline">\(Y\)</span> based on its parameters, or inputs. Linear and logistic regression are parametric.</p>
+<dd>A model based on one or more input parameters, that yields a value for Y, as in: <span class="math display">\[f(X) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p\]</span> <span class="math display">\[Y \approx \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p\]</span> <span class="math display">\[\text{income} \approx \beta_0 + \beta_1 \times \text{education} + \beta_2 \times \text{seniority}\]</span> This creates a predictive, <em>inflexible</em> model which usually does not match the true <span class="math inline">\(f\)</span>, but which has advantages of simplicity and interpretability. It can be used to predict values for <span class="math inline">\(Y\)</span> based on its parameters, or inputs. Linear and logistic regression are parametric.
 </dd>
 <dt>non-parametric methods (23)</dt>
-<dd><p>methods that do not attempt to estimate <span class="math inline">\(f\)</span>. More flexible and have the potential to very closely match observations, but with the risk of <em>overfitting</em> the data and increasing the <em>variance</em> of subsequent observations. They require much more data than parametric models, and may be difficult to interpret, K-Nearest Neighbor and Support Vector Machines are non-parametric.</p>
+<dd>methods that do not attempt to estimate <span class="math inline">\(f\)</span>. More flexible and have the potential to very closely match observations, but with the risk of <em>overfitting</em> the data and increasing the <em>variance</em> of subsequent observations. They require much more data than parametric models, and may be difficult to interpret, K-Nearest Neighbor and Support Vector Machines are non-parametric.
 </dd>
 <dt>prediction (26)</dt>
-<dd><p>seeking to guess the value of an response variable <span class="math inline">\(y_i\)</span> given a set of observations and a predictor <span class="math inline">\(f\)</span>.</p>
+<dd>seeking to guess the value of an response variable <span class="math inline">\(y_i\)</span> given a set of observations and a predictor <span class="math inline">\(f\)</span>.
 </dd>
 <dt>inference (26)</dt>
-<dd><p>a model that seems to better understand the relationship between the response and the predictors.</p>
+<dd>a model that seems to better understand the relationship between the response and the predictors.
 </dd>
 <dt>supervised learning (26)</dt>
-<dd><p>a category of model that allows us to guess a <span class="math inline">\(y_i\)</span> response to a set of predictor measurements <span class="math inline">\(x_i, i = 1, \dots, n\)</span>.</p>
+<dd>a category of model that allows us to guess a <span class="math inline">\(y_i\)</span> response to a set of predictor measurements <span class="math inline">\(x_i, i = 1, \dots, n\)</span>.
 </dd>
 <dt>unsupervised learning (26)</dt>
-<dd><p>a category of model in which there are observations/measurements <span class="math inline">\(x_i, i = 1, \dots, n\)</span>, but no associated response <span class="math inline">\(y_i\)</span>. Linear regression cannot be used because there is no response variable to predict.</p>
+<dd>a category of model in which there are observations/measurements <span class="math inline">\(x_i, i = 1, \dots, n\)</span>, but no associated response <span class="math inline">\(y_i\)</span>. Linear regression cannot be used because there is no response variable to predict.
 </dd>
 <dt>cluster analysis (27)</dt>
-<dd><p>in unsupervised learning, a statistical method for determining whether a set of observations can be divided into “relatively distinct groups,” looking for similarities within the groups. (Topic modeling may be an example of this.)</p>
+<dd>in unsupervised learning, a statistical method for determining whether a set of observations can be divided into “relatively distinct groups,” looking for similarities within the groups. (Topic modeling may be an example of this.)
 </dd>
 <dt>quantitative variables (28)</dt>
-<dd><p>numeric values; age, height, weight, quantity. Usually the response variable type for regression problems.</p>
+<dd>numeric values; age, height, weight, quantity. Usually the response variable type for regression problems.
 </dd>
 <dt>qualitative variables (28)</dt>
-<dd><p>also <em>categorical</em>: values from a discrete set. Eye color, name, yes/no. Usually the response variable type for classification problems.</p>
+<dd>also <em>categorical</em>: values from a discrete set. Eye color, name, yes/no. Usually the response variable type for classification problems.
 </dd>
 <dt>regression problems (28)</dt>
-<dd><p>problems with quantitative response variables. Given predictors foo, bar, and baz, how big is the frob?</p>
+<dd>problems with quantitative response variables. Given predictors foo, bar, and baz, how big is the frob?
 </dd>
 <dt>classification problems (28)</dt>
-<dd><p>problems with qualitative response variables. Given predictors foo, bar, and baz, is the outcome likely to be a frob, a frib or a freeb?</p>
+<dd>problems with qualitative response variables. Given predictors foo, bar, and baz, is the outcome likely to be a frob, a frib or a freeb?
 </dd>
 <dt>mean squared error (MSE) (29)</dt>
-<dd><p>the average squared error for a set of observations: <span class="math display">\[MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{f}(x_i))^2\]</span> MSE is small if the predicted responses are close to the true responses, and larger as it becomes less accurate; computed from training data, and Gareth <em>et al.</em> suggest it should be called <em>training MSE</em>.</p>
+<dd>the average squared error for a set of observations: <span class="math display">\[MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{f}(x_i))^2\]</span> MSE is small if the predicted responses are close to the true responses, and larger as it becomes less accurate; computed from training data, and Gareth <em>et al.</em> suggest it should be called <em>training MSE</em>.
 </dd>
 <dt>variance (34)</dt>
-<dd><p>*“the amount by which* <span class="math inline">\(\hat{f}\)</span> would change if we estimated it using a different training data set”</p>
+<dd><em>“the amount by which <span class="math inline">\(\hat{f}\)</span> would change if we estimated it using a different training data set”</em>
 </dd>
 <dt>bias (35)</dt>
-<dd><p><em>“the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model”</em>, as in the error from the (presumed) linearity of a regression against non-linear data whose complexity it does not capture. More flexible models increase variance and decrease bias.</p>
+<dd><em>“the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model”</em>, as in the error from the (presumed) linearity of a regression against non-linear data whose complexity it does not capture. More flexible models increase variance and decrease bias.
 </dd>
 <dt>bias-variance trade-off (36)</dt>
-<dd><p>The tension in seeking the best model for the data between missing the true <span class="math inline">\(f\)</span> with an overly simple (biased) model, vs. an overfitted model with too much variance from mapping too closely to test data.</p>
+<dd>The tension in seeking the best model for the data between missing the true <span class="math inline">\(f\)</span> with an overly simple (biased) model, vs. an overfitted model with too much variance from mapping too closely to test data.
 </dd>
 <dt>error rate (37)</dt>
-<dd><p>In classification, the proportion of classifications that are mistakes. <span class="math display">\[\frac{1}{n}\sum_{i=1}^{n}I(y_i \neq \hat{y}_i)\]</span> <span class="math inline">\(I\)</span> is 1 if <span class="math inline">\(y_i \neq \hat{y}_i\)</span> - if the guess for any given <span class="math inline">\(y\)</span> is wrong. The error rate is the percentage of incorrect classifications. Also the <em>training erorr rate</em>.</p>
+<dd>In classification, the proportion of classifications that are mistakes. <span class="math display">\[\frac{1}{n}\sum_{i=1}^{n}I(y_i \neq \hat{y}_i)\]</span> <span class="math inline">\(I\)</span> is 1 if <span class="math inline">\(y_i \neq \hat{y}_i\)</span> - if the guess for any given <span class="math inline">\(y\)</span> is wrong. The error rate is the percentage of incorrect classifications. Also the <em>training erorr rate</em>.
 </dd>
 <dt>indicator variable (37)</dt>
-<dd><p><span class="math inline">\(I\)</span> in the error rate definition above; a logical variable indicating the presence or absence of a characteristic or trait (such as an accurate classification).</p>
+<dd><span class="math inline">\(I\)</span> in the error rate definition above; a logical variable indicating the presence or absence of a characteristic or trait (such as an accurate classification).
 </dd>
 <dt>test error rate (37)</dt>
-<dd><p>like the <em>training error rate</em> but applied to the test data. Uses <span class="math inline">\(\text{Ave}\)</span> instead of sum notation: <span class="math display">\[\text{Ave}(I(y_0 \neq \hat{y}_0))\]</span> <span class="math inline">\(\hat{y}_0\)</span> is the predicted class label from the classifier.</p>
+<dd>like the <em>training error rate</em> but applied to the test data. Uses <span class="math inline">\(\text{Ave}\)</span> instead of sum notation: <span class="math display">\[\text{Ave}(I(y_0 \neq \hat{y}_0))\]</span> <span class="math inline">\(\hat{y}_0\)</span> is the predicted class label from the classifier.
 </dd>
 <dt>conditional probability (37)</dt>
-<dd><p>The chance that <span class="math inline">\(Y = j\)</span> given an observed <span class="math inline">\(x_0\)</span>, as in the <em>Bayes classifier</em>: <span class="math display">\[\text{Pr}(Y = j|X = x_0)\]</span> In a two-class, yes/no classifier, we decide based on whether <span class="math inline">\(\text{Pr}(Y = j|X = x_0)\)</span> is <span class="math inline">\(&gt; 0.5\)</span>, or not. Note that <span class="math inline">\(Y\)</span> is the class, as in “ham”/“spam”, not a <span class="math inline">\(y\)</span>-axis coordinate.</p>
+<dd>The chance that <span class="math inline">\(Y = j\)</span> given an observed <span class="math inline">\(x_0\)</span>, as in the <em>Bayes classifier</em>: <span class="math display">\[\text{Pr}(Y = j|X = x_0)\]</span> In a two-class, yes/no classifier, we decide based on whether <span class="math inline">\(\text{Pr}(Y = j|X = x_0)\)</span> is <span class="math inline">\(&gt; 0.5\)</span>, or not. Note that <span class="math inline">\(Y\)</span> is the class, as in “ham”/“spam”, not a <span class="math inline">\(y\)</span>-axis coordinate.
 </dd>
 <dt>Bayes decision boundary (38)</dt>
-<dd><p>a visual depiction of the line of 50% probability dividing (exactly two?) classes in a two-dimensional space</p>
+<dd>a visual depiction of the line of 50% probability dividing (exactly two?) classes in a two-dimensional space
 </dd>
 <dt>Bayes error rate (38)</dt>
-<dd><p>the expected (average) probability of classification error over all values of X in a data set. <span class="math display">\[1 - E(\underset{j}{maxPr}(Y = j|X))\]</span> The <span class="math inline">\(\underset{j}{maxPr}\)</span> whichever of the <span class="math inline">\(j\)</span> classes has the highest probability for any given value of <span class="math inline">\(X\)</span>. Again, <span class="math inline">\(Y\)</span> is not a y-axis coordinate of a two-dimensional space, it’s the <em>class</em> of the classification: “yes”/“no”, “ham”/“spam”, “infected”/“not infected”. Also: <em>“The Bayes error rate is analogous to the irreducible error, discussed earlier.”</em></p>
+<dd>the expected (average) probability of classification error over all values of X in a data set. <span class="math display">\[1 - E(\underset{j}{maxPr}(Y = j|X))\]</span> The <span class="math inline">\(\underset{j}{maxPr}\)</span> whichever of the <span class="math inline">\(j\)</span> classes has the highest probability for any given value of <span class="math inline">\(X\)</span>. Again, <span class="math inline">\(Y\)</span> is not a y-axis coordinate of a two-dimensional space, it’s the <em>class</em> of the classification: “yes”/“no”, “ham”/“spam”, “infected”/“not infected”. Also: <em>“The Bayes error rate is analogous to the irreducible error, discussed earlier.”</em>
 </dd>
 <dt>K-nearest-neighbors (KNN) (39)</dt>
-<dd><p>a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular “neighborhood” on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.</p>
+<dd>a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular “neighborhood” on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.
 </dd>
 </dl>
 </div>

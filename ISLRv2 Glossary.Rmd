@@ -47,7 +47,7 @@ dt + dt {
     padding-right: 60%;
 }
 dt + dt + dd {
-    margin-top: -1.625em; /* own height including padding */git add I
+    margin-top: -1.625em; /* own height including padding */
     padding-left: calc(30% + 1em);
 }
 ```
@@ -57,201 +57,110 @@ Page numbers in parenthesis after terms.
 # Chapter 2
 
 input variable (15)
-
-:   also *predictor*, *independent variable*, *feature*; usually written
-    $X_1, X_2$, etc. The parameter or parameters we are testing to see
-    if they are related to or affect the output.
+: also *predictor*, *independent variable*, *feature*; usually written $X_1, X_2$, etc. The parameter or parameters we are testing to see if they are related to or affect the output.
 
 output variable (15)
-
-:   also *response*, *dependent variable*; usually written $Y$. The
-    outcome being measured.
+: also *response*, *dependent variable*; usually written $Y$. The outcome being measured.
 
 error term (16)
-
-:   $\epsilon$ in the equation\
-    $$Y = f(X) + \epsilon$$ a random quantity of inaccuracy,
-    *independent of X* and with *mean 0*.
+: $\epsilon$ in the equation  
+$$Y = f(X) + \epsilon$$
+a random quantity of inaccuracy, *independent of X* and with *mean 0*.
 
 systematic (16)
-
-:   $f$ in the equation\
-    $$Y = f(X) + \epsilon$$ the function that describes the (systematic)
-    information $X$ provides about $Y$. This plus the error term equals
-    $Y$.
+: $f$ in the equation  
+$$Y = f(X) + \epsilon$$
+the function that describes the (systematic) information $X$ provides about $Y$. This plus the error term equals $Y$.
 
 reducible error (18)
-
-:   The amount of the error $\epsilon$ that could be eliminated by
-    improving our estimator $\hat{f}$; the difference between $\hat{f}$
-    and $f$. This book and course is mostly about ways to minimize the
-    reducible error.
+: The amount of the error $\epsilon$ that could be eliminated by improving our estimator $\hat{f}$; the difference between $\hat{f}$ and $f$. This book and course is mostly about ways to minimize the reducible error.
 
 irreducible error (18)
-
-:   The amount of $\epsilon$ that could not be reduced even if $f$ was a
-    perfect estimator of $Y$. Always greater than 0. Could be due to
-    hidden variables in $\epsilon$, or random fluctuations in Y, like a
-    measure of "[a] patient's general feeling of well-being on that
-    day".
+: The amount of $\epsilon$ that could not be reduced even if $f$ was a perfect estimator of $Y$. Always greater than 0. Could be due to hidden variables in $\epsilon$, or random fluctuations in Y, like a measure of "[a] patient's general feeling of well-being on that day".
 
 expected value (19)
-
-:   *average value* of an expected measure.
+: *average value* of an expected measure.
 
 training data (21)
-
-:   data used to develop the model for estimating $f$.
+: data used to develop the model for estimating $f$.
 
 parametric methods (21)
-
-:   A model based on one or more input parameters, that yields a value
-    for Y, as in:
-    $$f(X) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p$$
-    $$Y \approx \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p$$
-    $$\text{income} \approx \beta_0 + \beta_1 \times \text{education} + \beta_2 \times \text{seniority}$$
-    This creates a predictive, *inflexible* model which usually does not
-    match the true $f$, but which has advantages of simplicity and
-    interpretability. It can be used to predict values for $Y$ based on
-    its parameters, or inputs. Linear and logistic regression are
-    parametric.
+: A model based on one or more input parameters, that yields a value for Y, as in:
+$$f(X) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p$$
+$$Y \approx \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p$$
+$$\text{income} \approx \beta_0 + \beta_1 \times \text{education} + \beta_2 \times \text{seniority}$$
+This creates a predictive, *inflexible* model which usually does not match the true $f$, but which has advantages of simplicity and interpretability. It can be used to predict values for $Y$ based on its parameters, or inputs. Linear and logistic regression are parametric.
 
 non-parametric methods (23)
-
-:   methods that do not attempt to estimate $f$. More flexible and have
-    the potential to very closely match observations, but with the risk
-    of *overfitting* the data and increasing the *variance* of
-    subsequent observations. They require much more data than parametric
-    models, and may be difficult to interpret, K-Nearest Neighbor and
-    Support Vector Machines are non-parametric.
+: methods that do not attempt to estimate $f$. More flexible and have the potential to very closely match observations, but with the risk of *overfitting* the data and increasing the *variance* of subsequent observations. They require much more data than parametric models, and may be difficult to interpret, K-Nearest Neighbor and Support Vector Machines are non-parametric.
 
 prediction (26)
-
-:   seeking to guess the value of an response variable $y_i$ given a set
-    of observations and a predictor $f$.
+: seeking to guess the value of an response variable $y_i$ given a set of observations and a predictor $f$.
 
 inference (26)
-
-:   a model that seems to better understand the relationship between the
-    response and the predictors.
+: a model that seems to better understand the relationship between the response and the predictors.
 
 supervised learning (26)
-
-:   a category of model that allows us to guess a $y_i$ response to a
-    set of predictor measurements $x_i, i = 1, \dots, n$.
+: a category of model that allows us to guess a $y_i$ response to a set of predictor measurements $x_i, i = 1, \dots, n$.
 
 unsupervised learning (26)
-
-:   a category of model in which there are observations/measurements
-    $x_i, i = 1, \dots, n$, but no associated response $y_i$. Linear
-    regression cannot be used because there is no response variable to
-    predict.
+: a category of model in which there are observations/measurements $x_i, i = 1, \dots, n$, but no associated response $y_i$. Linear regression cannot be used because there is no response variable to predict.
 
 cluster analysis (27)
-
-:   in unsupervised learning, a statistical method for determining
-    whether a set of observations can be divided into "relatively
-    distinct groups," looking for similarities within the groups. (Topic
-    modeling may be an example of this.)
+: in unsupervised learning, a statistical method for determining whether a set of observations can be divided into "relatively distinct groups," looking for similarities within the groups. (Topic modeling may be an example of this.)
 
 quantitative variables (28)
-
-:   numeric values; age, height, weight, quantity. Usually the response
-    variable type for regression problems.
+: numeric values; age, height, weight, quantity. Usually the response variable type for regression problems.
 
 qualitative variables (28)
-
-:   also *categorical*: values from a discrete set. Eye color, name,
-    yes/no. Usually the response variable type for classification
-    problems.
+: also *categorical*: values from a discrete set. Eye color, name, yes/no. Usually the response variable type for classification problems.
 
 regression problems (28)
-
-:   problems with quantitative response variables. Given predictors foo,
-    bar, and baz, how big is the frob?
+: problems with quantitative response variables. Given predictors foo, bar, and baz, how big is the frob?
 
 classification problems (28)
-
-:   problems with qualitative response variables. Given predictors foo,
-    bar, and baz, is the outcome likely to be a frob, a frib or a freeb?
+: problems with qualitative response variables. Given predictors foo, bar, and baz, is the outcome likely to be a frob, a frib or a freeb?
 
 mean squared error (MSE) (29)
-
-:   the average squared error for a set of observations:
-    $$MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{f}(x_i))^2$$ MSE is
-    small if the predicted responses are close to the true responses,
-    and larger as it becomes less accurate; computed from training data,
-    and Gareth *et al.* suggest it should be called *training MSE*.
+: the average squared error for a set of observations:
+$$MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{f}(x_i))^2$$
+MSE is small if the predicted responses are close to the true responses, and larger as it becomes less accurate; computed from training data, and Gareth *et al.* suggest it should be called *training MSE*.
 
 variance (34)
-
-:   *"the amount by which* $\hat{f}$ would change if we estimated it
-    using a different training data set"
+: _"the amount by which $\hat{f}$ would change if we estimated it using a different training data set"_
 
 bias (35)
-
-:   *"the error that is introduced by approximating a real-life problem,
-    which may be extremely complicated, by a much simpler model"*, as in
-    the error from the (presumed) linearity of a regression against
-    non-linear data whose complexity it does not capture. More flexible
-    models increase variance and decrease bias.
+: _"the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model"_, as in the error from the (presumed) linearity of a regression against non-linear data whose complexity it does not capture. More flexible models increase variance and decrease bias.
 
 bias-variance trade-off (36)
-
-:   The tension in seeking the best model for the data between missing
-    the true $f$ with an overly simple (biased) model, vs. an overfitted
-    model with too much variance from mapping too closely to test data.
+: The tension in seeking the best model for the data between missing the true $f$ with an overly simple (biased) model, vs. an overfitted model with too much variance from mapping too closely to test data.
 
 error rate (37)
-
-:   In classification, the proportion of classifications that are
-    mistakes. $$\frac{1}{n}\sum_{i=1}^{n}I(y_i \neq \hat{y}_i)$$ $I$ is
-    1 if $y_i \neq \hat{y}_i$ - if the guess for any given $y$ is wrong.
-    The error rate is the percentage of incorrect classifications. Also
-    the *training erorr rate*.
+: In classification, the proportion of classifications that are mistakes.
+$$\frac{1}{n}\sum_{i=1}^{n}I(y_i \neq \hat{y}_i)$$
+$I$ is 1 if $y_i \neq \hat{y}_i$ - if the guess for any given $y$ is wrong. The error rate is the percentage of incorrect classifications. Also the *training erorr rate*.
 
 indicator variable (37)
-
-:   $I$ in the error rate definition above; a logical variable
-    indicating the presence or absence of a characteristic or trait
-    (such as an accurate classification).
+: $I$ in the error rate definition above; a logical variable indicating the presence or absence of a characteristic or trait (such as an accurate classification).
 
 test error rate (37)
-
-:   like the *training error rate* but applied to the test data. Uses
-    $\text{Ave}$ instead of sum notation:
-    $$\text{Ave}(I(y_0 \neq \hat{y}_0))$$ $\hat{y}_0$ is the predicted
-    class label from the classifier.
+: like the *training error rate* but applied to the test data. Uses $\text{Ave}$ instead of sum notation:
+$$\text{Ave}(I(y_0 \neq \hat{y}_0))$$
+$\hat{y}_0$ is the predicted class label from the classifier.
 
 conditional probability (37)
-
-:   The chance that $Y = j$ given an observed $x_0$, as in the *Bayes
-    classifier*: $$\text{Pr}(Y = j|X = x_0)$$ In a two-class, yes/no
-    classifier, we decide based on whether $\text{Pr}(Y = j|X = x_0)$ is
-    $> 0.5$, or not. Note that $Y$ is the class, as in "ham"/"spam", not
-    a $y$-axis coordinate.
+: The chance that $Y = j$ given an observed $x_0$, as in the *Bayes classifier*:
+$$\text{Pr}(Y = j|X = x_0)$$
+In a two-class, yes/no classifier, we decide based on whether $\text{Pr}(Y = j|X = x_0)$ is $> 0.5$, or not. Note that $Y$ is the class, as in "ham"/"spam", not a $y$-axis coordinate.
 
 Bayes decision boundary (38)
-
-:   a visual depiction of the line of 50% probability dividing (exactly
-    two?) classes in a two-dimensional space
+: a visual depiction of the line of 50% probability dividing (exactly two?) classes in a two-dimensional space
 
 Bayes error rate (38)
-
-:   the expected (average) probability of classification error over all
-    values of X in a data set. $$1 - E(\underset{j}{maxPr}(Y = j|X))$$
-    The $\underset{j}{maxPr}$ whichever of the $j$ classes has the
-    highest probability for any given value of $X$. Again, $Y$ is not a
-    y-axis coordinate of a two-dimensional space, it's the *class* of
-    the classification: "yes"/"no", "ham"/"spam", "infected"/"not
-    infected". Also: *"The Bayes error rate is analogous to the
-    irreducible error, discussed earlier."*
+: the expected (average) probability of classification error over all values of X in a data set.
+$$1 - E(\underset{j}{maxPr}(Y = j|X))$$
+The $\underset{j}{maxPr}$ whichever of the $j$ classes has the highest probability for any given value of $X$. Again, $Y$ is not a y-axis coordinate of a two-dimensional space, it's the *class* of the classification: "yes"/"no", "ham"/"spam", "infected"/"not infected". Also:
+_"The Bayes error rate is analogous to the irreducible error, discussed earlier."_
 
 K-nearest-neighbors (KNN) (39)
-
-:   a classifier that assigns a class Y to an observation based on the
-    population proportions of its nearest neighbors; a circular
-    "neighborhood" on a two-dimensional plot. It looks at actual data
-    points that have been classified, and asks what any given
-    non-classified point would be classified as based on its nearest
-    neighbors.
+: a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular "neighborhood" on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.
