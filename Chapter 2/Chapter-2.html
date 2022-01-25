@@ -103,7 +103,7 @@ if (window.hljs) {
 </div>
 <div id="explain-whether-each-scenario-is-a-classification-or-regression-problem-and-indicate-whether-we-are-most-interested-in-inference-or-prediction.-finally-provide-n-and-p." class="section level1">
 <h1>2. Explain whether each scenario is a classification or regression problem, and indicate whether we are most interested in inference or prediction. Finally, provide <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>.</h1>
-<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">“The major difference between machine learning and statistics is their purpose. Machine learning models are designed to make the most accurate <em>predictions</em> possible. Statistical models are designed for <em>inference</em> about the relationships between variables.” - Matthew Stewart, <a href="https://towardsdatascience.com/the-actual-difference-between-statistics-and-machine-learning-64b49f07ea3">The Actual Difference Between Statistics and Machine Learning</a></span></span></p>
+<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">^[“The major difference between machine learning and statistics is their purpose. Machine learning models are designed to make the most accurate <em>predictions</em> possible. Statistical models are designed for <em>inference</em> about the relationships between variables.” - Matthew Stewart, <a href="https://towardsdatascience.com/the-actual-difference-between-statistics-and-machine-learning-64b49f07ea3">The Actual Difference Between Statistics and Machine Learning</a></span></span></p>
 <p>(<em>prediction</em> is trying to anticipate the value, or likely outcome, of a set of predictors; <em>inference</em> is trying to understand the relationship between the outcome and the predictors. Both fall under the category of supervised learning, since there <em>is</em> an outcome variable to predict. <em>Regression</em> problems have quantitative outcome variables; <em>classification</em> problems have categorical outcome variables. <span class="math inline">\(n\)</span> is the sample size, or number of observations, and <span class="math inline">\(p\)</span> is the number of predictors.)</p>
 <div id="a-we-collect-a-set-of-data-on-the-top-500-firms-in-the-us.-for-each-firm-we-record-profit-number-of-employees-industry-and-the-ceo-salary.-we-are-interested-in-understanding-which-factors-affect-ceo-salary." class="section level2">
 <h2>(a) We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry and the CEO salary. We are interested in understanding which factors affect CEO salary.</h2>
@@ -251,13 +251,14 @@ if (window.hljs) {
 <li><h2 id="a-use-the-read.csv-function-to-read-the-data-into-r.-call-the-loaded-data-college.-make-sure-that-you-have-the-directory-set-to-the-correct-location-for-the-data.">(a) Use the <code>read.csv()</code> function to read the data into <code>R</code>. Call the loaded data <code>college</code>. Make sure that you have the directory set to the correct location for the data.</h2></li>
 </ol></li>
 </ol>
+<pre class="r"><code>college &lt;- read.csv(&quot;College.csv&quot;)</code></pre>
 <div id="b-look-at-the-data-using-the-view-function.-you-should-notice-that-the-first-column-is-just-the-name-of-each-university.-we-dont-really-want-r-to-treat-this-as-data.-however-it-may-be-handy-to-have-these-names-for-later.-try-the-following-commands" class="section level2">
 <h2>(b) Look at the data using the <code>View()</code> function. You should notice that the first column is just the name of each university. We don’t really want <code>R</code> to treat this as data. However, it may be handy to have these names for later. Try the following commands:</h2>
-<pre class="r"><code>&gt; rownames(college) &lt;- college[, 1] 
-&gt; View(college)</code></pre>
+<pre class="r"><code>rownames(college) &lt;- college[, 1] 
+# &gt; View(college)</code></pre>
 <p>You should see that there is now a <code>row.names</code> column with the name of each university recorded. This means that <code>R</code> has given each row a name corresponding to the appropriate university. <code>R</code> will not try to perform calculations on the row names. However, we still need to eliminate the first column in the data where the names are stored. Try</p>
-<pre class="r"><code>&gt; college &lt;- college[, -1] 
-&gt; View(college)</code></pre>
+<pre class="r"><code>college &lt;- college[, -1] 
+View(college)</code></pre>
 <p>Now you should see that the first data column is <code>Private.</code> Note that another column labeled <code>row.names</code> now appears before the <code>Private</code> column. However, this is not a data column but rather the name that <code>R</code> is giving to each row.</p>
 </div>
 <div id="c-i.-use-the-summary-function-to-produce-a-numerical-summary-of-the-variables-in-the-data-set." class="section level2">

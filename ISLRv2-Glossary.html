@@ -98,7 +98,7 @@ dt + dt + dd {
     padding-left: calc(30% + 1em);
 }
 </style>
-<p>Page numbers in parenthesis after terms.</p>
+<p>Page numbers in parenthesis after terms, from <a href="https://www.statlearning.com/">ISLR</a> 2nd edition. <a href="https://github.com/slinberg-umass/797MS-ISLRv2-notes/blob/main/ISLRv2%20Glossary.Rmd">Source to this page</a> on github.</p>
 <div id="chapter-2" class="section level1">
 <h1>Chapter 2</h1>
 <dl>
@@ -193,6 +193,46 @@ dt + dt + dd {
 </dd>
 <dt>K-nearest-neighbors (KNN) (39)</dt>
 <dd>a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular “neighborhood” on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.
+</dd>
+</dl>
+</div>
+<div id="chapter-3" class="section level1">
+<h1>Chapter 3</h1>
+<dl>
+<dt>Synergy effect / interaction effect (60)</dt>
+<dd>when two or more predictors affect each other as well as the outcome; when 50k each in TV or radio ads give different results than 100k in either one
+</dd>
+<dt>Simple linear regression</dt>
+<dd>the simplest model, predicting <span class="math inline">\(Y\)</span> from a single predictor <span class="math inline">\(X\)</span>. <span class="math display">\[Y \approx \beta_0 + \beta_1X\]</span> <span class="math inline">\(\approx\)</span> = “is approximately modeled as”
+</dd>
+<dt>least squares (61)</dt>
+<dd>the most common measure of closeness of a regression line to its data points, the sum of squares of the distances between the points and the closest point on the line (directly above or below)
+</dd>
+<dt>residual (61)</dt>
+<dd>the difference between <span class="math inline">\(y_i\)</span> and <span class="math inline">\(\hat{y}_i\)</span>, also <span class="math inline">\(e_i\)</span>; the difference between the <span class="math inline">\(i\)</span>th response variable and the <span class="math inline">\(i\)</span>th response variable predicted by the model
+</dd>
+<dt>residual sum of squares (RSS) (62)</dt>
+<dd>the sum of the squared residuals for each point on the regression line <span class="math display">\[\text{RSS} = e_1^2 + e_2^2 + \dots + e_n^2\]</span> Formulas for <span class="math inline">\(\hat{\beta_0}\)</span> and <span class="math inline">\(\hat{\beta_1}\)</span> are on p. 62
+</dd>
+<dt>intercept (<span class="math inline">\(\beta_0\)</span>) (63)</dt>
+<dd>the expected value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X = 0\)</span>
+</dd>
+<dt>slope (<span class="math inline">\(\beta_1\)</span>) (63)</dt>
+<dd>the average increase in <span class="math inline">\(Y\)</span> associated with a one-unit increase in <span class="math inline">\(X\)</span>
+</dd>
+<dt>error term (<span class="math inline">\(\epsilon\)</span>) (63)</dt>
+<dd>whatever we missed with the model, due to the true model not being linear (it almost never is), measurement error, or other variables that cause variation in <span class="math inline">\(Y\)</span>
+</dd>
+<dt>population regression line (63)</dt>
+<dd>“the best linear approximation to the true relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>” <span class="math display">\[Y = \beta_0 + \beta_1X + \epsilon\]</span> least squares line (63)
+</dd>
+<dd>the regression line made of the least-squares estimates for <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>
+</dd>
+<dt>bias (65)</dt>
+<dd>in an estimator, something that systematically misses the true parameter; for an unbiased estimator, <span class="math inline">\(\hat{\mu} = \mu\)</span> when averaged over (huge) numbers of observations
+</dd>
+<dt>standard error (SE) (65)</dt>
+<dd>the average amount that an estimate <span class="math inline">\(\hat{\mu}\)</span> differs from the actual value of <span class="math inline">\(\mu\)</span> <span class="math display">\[\text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}\]</span> <span class="math inline">\(\sigma\)</span> is &quot;the standard deviation of each of the realizations <span class="math inline">\(y_i\)</span> of <span class="math inline">\(Y\)</span>.
 </dd>
 </dl>
 </div>

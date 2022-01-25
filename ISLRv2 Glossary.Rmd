@@ -52,7 +52,7 @@ dt + dt + dd {
 }
 ```
 
-Page numbers in parenthesis after terms.
+Page numbers in parenthesis after terms, from [ISLR](https://www.statlearning.com/) 2nd edition. [Source to this page](https://github.com/slinberg-umass/797MS-ISLRv2-notes/blob/main/ISLRv2%20Glossary.Rmd) on github.
 
 # Chapter 2
 
@@ -164,3 +164,47 @@ _"The Bayes error rate is analogous to the irreducible error, discussed earlier.
 
 K-nearest-neighbors (KNN) (39)
 : a classifier that assigns a class Y to an observation based on the population proportions of its nearest neighbors; a circular "neighborhood" on a two-dimensional plot. It looks at actual data points that have been classified, and asks what any given non-classified point would be classified as based on its nearest neighbors.
+
+# Chapter 3
+
+Synergy effect / interaction effect (60)
+: when two or more predictors affect each other as well as the outcome; when 50k each in TV or radio ads give different results than 100k in either one
+
+Simple linear regression
+: the simplest model, predicting $Y$ from a single predictor $X$.
+$$Y \approx \beta_0 + \beta_1X$$
+$\approx$ = "is approximately modeled as"
+
+least squares (61)
+: the most common measure of closeness of a regression line to its data points, the sum of squares of the distances between the points and the closest point on the line (directly above or below)
+
+residual (61)
+: the difference between $y_i$ and $\hat{y}_i$, also $e_i$; the difference between the $i$th response variable and the $i$th response variable predicted by the model
+
+residual sum of squares (RSS) (62)
+: the sum of the squared residuals for each point on the regression line
+$$\text{RSS} = e_1^2 + e_2^2 + \dots + e_n^2$$
+Formulas for $\hat{\beta_0}$ and $\hat{\beta_1}$ are on p. 62
+
+intercept ($\beta_0$) (63)
+: the expected value of $Y$ when $X = 0$
+
+slope ($\beta_1$) (63)
+: the average increase in $Y$ associated with a one-unit increase in $X$
+
+error term ($\epsilon$) (63)
+: whatever we missed with the model, due to the true model not being linear (it almost never is), measurement error, or other variables that cause variation in $Y$
+
+population regression line (63)
+: "the best linear approximation to the true relationship between $X$ and $Y$"
+$$Y = \beta_0 + \beta_1X + \epsilon$$
+least squares line (63)
+: the regression line made of the least-squares estimates for $\beta_0$ and $\beta_1$
+
+bias (65)
+: in an estimator, something that systematically misses the true parameter; for an unbiased estimator, $\hat{\mu} = \mu$ when averaged over (huge) numbers of observations
+
+standard error (SE) (65)
+: the average amount that an estimate $\hat{\mu}$ differs from the actual value of $\mu$
+$$\text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}$$
+$\sigma$ is "the standard deviation of each of the realizations $y_i$ of $Y$.
