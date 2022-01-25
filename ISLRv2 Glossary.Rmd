@@ -207,4 +207,35 @@ bias (65)
 standard error (SE) (65)
 : the average amount that an estimate $\hat{\mu}$ differs from the actual value of $\mu$
 $$\text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}$$
-$\sigma$ is "the standard deviation of each of the realizations $y_i$ of $Y$.
+$\sigma$ is "the standard deviation of each of the realizations $y_i$ of $Y$. Since $\sigma^2$ is divided by $n$, the standard error shrinks as observations increase.
+
+residual standard error (RSE) (66)
+: the estimate of $\sigma$
+$$\text{RSE} = \sqrt{RSS / (n-2)}$$
+
+confidence interval (66)
+: a range of values within which we have a measured probability (often 95%) of containing the true value of the parameter; a 95% confidence interval in linear regression takes the form
+$$\hat{\beta_1} \pm 2 \cdot \text{SE}(\hat{\beta_1})$$
+
+t-statistic (67)
+: the number of standard deviations that $\hat{\beta_1}$ is away from $0$.
+$$t = \frac{{\hat{\beta_1}} - 0}{\text{SE}(\hat{\beta_1})}$$
+For there to be a relationship between $X$ and $Y$, $\hat{\beta_1}$ has to be nonzero. The standard error (SE) of $\hat{\beta_1}$ (in the denominator above) measures its accuracy; if it is small, then $t$ will be larger, and if it is large, then $t$ will be smaller. $t$ is around 2 for a p-value of 0.05, and around 2.75 for a p-value of 0.01.
+
+p-value (67)
+: the probability of observing a value greater than $|t|$ by chance.
+
+total sum of squares (TSS) (70)
+: the total variance in the response $Y$
+$$\text{TSS} = \sum(y_i - \bar{y})^2$$
+compare with RSS, the amount of variability left unexplained after the regression. TSS - RSS is the amount of variability (or error) explained by the regression.
+
+$R^2$ statistic (70)
+: the proportion of variance in $Y$ explained by $X$, a range from 0 to 1
+$$R^2 = \frac{\text{TSS - RSS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}$$
+$R^2$ values close to 1 indicate a regression that explains a lot of the variability in the response, and a stronger model. A value close to 0 indicates that the regression doesn't explain much of the variability.
+
+correlation (70)
+: a measure of the linearity of the relationship between $X$ and $Y$; values close to 0 indicate weak-to-no relationship, values near 1 or -1 indicate strong positive or negative correlation
+(horrible formula on p.70)
+

@@ -232,7 +232,28 @@ dt + dt + dd {
 <dd>in an estimator, something that systematically misses the true parameter; for an unbiased estimator, <span class="math inline">\(\hat{\mu} = \mu\)</span> when averaged over (huge) numbers of observations
 </dd>
 <dt>standard error (SE) (65)</dt>
-<dd>the average amount that an estimate <span class="math inline">\(\hat{\mu}\)</span> differs from the actual value of <span class="math inline">\(\mu\)</span> <span class="math display">\[\text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}\]</span> <span class="math inline">\(\sigma\)</span> is &quot;the standard deviation of each of the realizations <span class="math inline">\(y_i\)</span> of <span class="math inline">\(Y\)</span>.
+<dd>the average amount that an estimate <span class="math inline">\(\hat{\mu}\)</span> differs from the actual value of <span class="math inline">\(\mu\)</span> <span class="math display">\[\text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}\]</span> <span class="math inline">\(\sigma\)</span> is &quot;the standard deviation of each of the realizations <span class="math inline">\(y_i\)</span> of <span class="math inline">\(Y\)</span>. Since <span class="math inline">\(\sigma^2\)</span> is divided by <span class="math inline">\(n\)</span>, the standard error shrinks as observations increase.
+</dd>
+<dt>residual standard error (RSE) (66)</dt>
+<dd>the estimate of <span class="math inline">\(\sigma\)</span> <span class="math display">\[\text{RSE} = \sqrt{RSS / (n-2)}\]</span>
+</dd>
+<dt>confidence interval (66)</dt>
+<dd>a range of values within which we have a measured probability (often 95%) of containing the true value of the parameter; a 95% confidence interval in linear regression takes the form <span class="math display">\[\hat{\beta_1} \pm 2 \cdot \text{SE}(\hat{\beta_1})\]</span>
+</dd>
+<dt>t-statistic (67)</dt>
+<dd>the number of standard deviations that <span class="math inline">\(\hat{\beta_1}\)</span> is away from <span class="math inline">\(0\)</span>. <span class="math display">\[t = \frac{{\hat{\beta_1}} - 0}{\text{SE}(\hat{\beta_1})}\]</span> For there to be a relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(\hat{\beta_1}\)</span> has to be nonzero. The standard error (SE) of <span class="math inline">\(\hat{\beta_1}\)</span> (in the denominator above) measures its accuracy; if it is small, then <span class="math inline">\(t\)</span> will be larger, and if it is large, then <span class="math inline">\(t\)</span> will be smaller. <span class="math inline">\(t\)</span> is around 2 for a p-value of 0.05, and around 2.75 for a p-value of 0.01.
+</dd>
+<dt>p-value (67)</dt>
+<dd>the probability of observing a value greater than <span class="math inline">\(|t|\)</span> by chance.
+</dd>
+<dt>total sum of squares (TSS) (70)</dt>
+<dd>the total variance in the response <span class="math inline">\(Y\)</span> <span class="math display">\[\text{TSS} = \sum(y_i - \bar{y})^2\]</span> compare with RSS, the amount of variability left unexplained after the regression. TSS - RSS is the amount of variability (or error) explained by the regression.
+</dd>
+<dt><span class="math inline">\(R^2\)</span> statistic (70)</dt>
+<dd>the proportion of variance in <span class="math inline">\(Y\)</span> explained by <span class="math inline">\(X\)</span>, a range from 0 to 1 <span class="math display">\[R^2 = \frac{\text{TSS - RSS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}}\]</span> <span class="math inline">\(R^2\)</span> values close to 1 indicate a regression that explains a lot of the variability in the response, and a stronger model. A value close to 0 indicates that the regression doesn’t explain much of the variability.
+</dd>
+<dt>correlation (70)</dt>
+<dd>a measure of the linearity of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>; values close to 0 indicate weak-to-no relationship, values near 1 or -1 indicate strong positive or negative correlation (horrible formula on p.70)
 </dd>
 </dl>
 </div>
